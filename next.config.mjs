@@ -25,9 +25,13 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    minimumCacheTTL: 60,
+    formats: ['image/webp'],
   },
   swcMinify: true,
   compress: true,
+  poweredByHeader: false,
+  reactStrictMode: true,
 };
 
 // Thay module.exports bằng export default
