@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   webpack: (config, { isServer }) => {
     // Fixes npm packages that depend on `fs` module
     if (!isServer) {
@@ -9,18 +8,18 @@ const nextConfig: NextConfig = {
         fs: false,
       };
     }
-    
+
     config.experiments = {
       ...config.experiments,
-      topLevelAwait: true
+      topLevelAwait: true,
     };
 
     return config;
   },
   // Disable image optimization if you're having memory issues
   images: {
-    unoptimized: true
-  }
+    unoptimized: true,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
