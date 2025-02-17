@@ -26,9 +26,9 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Thêm cấu hình để giảm kích thước build
   swcMinify: true,
   compress: true,
 };
 
-module.exports = nextConfig;
+// Thay module.exports bằng export default
+export default nextConfig;
