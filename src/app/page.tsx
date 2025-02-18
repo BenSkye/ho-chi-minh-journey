@@ -4,32 +4,34 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion"
 
+import JourneyMap from '@/components/JourneyMap'
+
 const images = [
-  { src: "/ho-chi-minh-young.jpg", alt: "Bác Hồ thời trẻ" },
-  { src: "/ho-chi-minh-france.jpg", alt: "Bác Hồ tại Pháp" },
-  { src: "/ho-chi-minh-revolution.jpg", alt: "Bác Hồ trong thời kỳ cách mạng" },
-  { src: "/ho-chi-minh-independence.jpg", alt: "Bác Hồ đọc tuyên ngôn độc lập" },
+  { src: "https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Fho-chi-minh-young.jpg?alt=media&token=2952ac78-6c32-4757-9fb4-129250720d05", alt: "Bác Hồ thời trẻ" },
+  { src: "https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Fho-chi-minh-france.jpg?alt=media&token=d88d7c2b-4500-4762-bb01-eaf82b5818ef", alt: "Bác Hồ tại Pháp" },
+  { src: "https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Fho-chi-minh-revolution.jpg?alt=media&token=cb9c5e98-9348-4ae7-9bc2-72947a829150", alt: "Bác Hồ trong thời kỳ cách mạng" },
+  { src: "https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Fho-chi-minh-independence.jpg?alt=media&token=3c027a56-1675-40a8-8197-22100ad100eb", alt: "Bác Hồ đọc tuyên ngôn độc lập" },
 ]
 
 const testimonials = [
   {
     name: "Mahatma Gandhi",
-    image: "/gandhi.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Fgandhi.jpg?alt=media&token=18e3a57a-ddf9-4936-8e35-f981aa1f9b19",
     quote: "Hồ Chí Minh là một biểu tượng của lòng yêu nước và sự kiên định."
   },
   {
     name: "Fidel Castro",
-    image: "/castro.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Fcastro.jpg?alt=media&token=c90b8c79-899c-4c2e-9680-96c2ca2a37afg",
     quote: "Người đã chứng minh rằng một dân tộc nhỏ có thể đánh bại một đế quốc lớn."
   },
   {
     name: "Charles de Gaulle",
-    image: "/de-gaulle.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Fde-gaulle.jpg?alt=media&token=f92c49a7-0f4b-45f5-beba-c3fdb3f399b4",
     quote: "Ông ấy là một nhà lãnh đạo tài ba với tầm nhìn sâu rộng về độc lập dân tộc."
   },
   {
     name: "Che Guevara",
-    image: "/che-guevara.jpg",
+    image: "https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Fche-guevara.jpg?alt=media&token=757cbaf3-defa-4a6b-8b07-933625ec48de",
     quote: "Tinh thần cách mạng của Hồ Chí Minh là nguồn cảm hứng bất tận."
   }
 ]
@@ -88,6 +90,16 @@ export default function Home() {
           </div>
         </motion.div>
       </div>
+
+      <motion.div
+        className="mt-12 text-center mb-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 1.6 }}
+      >
+        <JourneyMap />
+      </motion.div>
+
 
       <motion.div
         className="mt-12 text-center mb-6"
