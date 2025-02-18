@@ -42,7 +42,7 @@ export default function MusicPlayer() {
 
     return (
         <div className="fixed bottom-4 right-4 p-2 bg-gray-800 rounded-full shadow-lg z-10">
-            <audio ref={audioRef} src="/tuyenngondoclap.mp3" preload="auto" loop />
+            <audio ref={audioRef} src="https://firebasestorage.googleapis.com/v0/b/mercibakery-3697b.appspot.com/o/hcm202%2Ftuyenngondoclap.mp3?alt=media&token=5ae6b72f-dfdd-4a02-9405-2c5845c8883d" preload="auto" loop />
             <button
                 onClick={togglePlay}
                 className="text-white p-2 rounded-full hover:bg-gray-700 transition"
