@@ -133,6 +133,9 @@ const Timeline: React.FC = () => {
                                 src={milestone.image}
                                 alt={milestone.event}
                                 className="w-full max-w-md mb-4 rounded-lg shadow-md"
+                                loading='lazy'
+                                width={100}
+                                height={100}
                             />
                         )}
 

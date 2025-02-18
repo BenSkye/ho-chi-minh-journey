@@ -162,6 +162,7 @@ export default function Home() {
                 alt={item.name}
                 width={100}
                 height={100}
+                loading='lazy'
                 className="rounded-full mx-auto mb-4"
               />
               <h3 className="text-xl font-semibold">{item.name}</h3>
