@@ -4,6 +4,7 @@ import type React from "react"
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown, ChevronUp } from "lucide-react"
+import Image from 'next/image'
 
 const milestones = [
     {
@@ -128,7 +129,7 @@ const Timeline: React.FC = () => {
 
                         {/* Hiển thị hình ảnh nếu có */}
                         {milestone.image && (
-                            <img
+                            <Image
                                 src={milestone.image}
                                 alt={milestone.event}
                                 className="w-full max-w-md mb-4 rounded-lg shadow-md"
